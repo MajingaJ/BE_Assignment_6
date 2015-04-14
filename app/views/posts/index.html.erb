@@ -1,0 +1,14 @@
+<h1>This Week's List of Blog Posts</h1>
+
+  <% @posts.each do |post| %>
+
+    <div class="postname">
+        <%= link_to post.postname, post_path(post) %>
+    </div>
+
+    <div class="time">
+      <%= post.created_at %>
+    </div>
+
+  <% end %>
+</ul>

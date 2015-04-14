@@ -1,0 +1,84 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+*{
+  font-family: Courier New;
+}
+
+h1{
+  text-align: center;
+  color: #003366;
+  font-size: 50px;
+}
+
+.postname{
+  width: 450px;
+  height:50px;
+  border: 1px solid black;
+  float: left;
+  text-decoration: none;
+  font-size: 30px;
+  text-align: center;
+  margin: 1px;
+}
+
+.time{
+  width: 450px;
+  height: 50px;
+  border: 1px solid black;
+  float: left;
+  font-size: 30px;
+  text-align: center;
+  margin: 1px;
+} 
+
+.postname a{
+  text-decoration: none;
+  font-weight: bold;
+  color:#003366;
+}
+
+.postname :hover{
+  color: #40e0d0;
+}
+
+.postname2{
+  font-size: 40px;
+  margin: 20px;
+  color:#003366;
+  font-weight: bold;
+}
+
+.name{
+  font-size: 25px;
+  margin: 20px;
+  color: #800080;
+  font-weight: bold;
+}
+
+.email{
+  font-size: 25px;
+  margin: 20px;
+  color: #008080;
+  font-weight: bold;
+}
+
+.time2{
+  font-size: 20px;
+  margin: 20px;
+  color: #40e0d0;
+  font-weight: bold;
+}
