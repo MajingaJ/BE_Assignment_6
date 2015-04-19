@@ -16,6 +16,9 @@
 
 *{
   font-family: Courier New;
+  width: 1100px;
+  padding: 5px;
+  margin: 0 auto;
 }
 
 h1{
@@ -24,8 +27,27 @@ h1{
   font-size: 50px;
 }
 
+.newpost{
+  border : 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  width : 300px;
+  height: 35px;
+}
+
+.newpost a{
+  text-decoration: none;
+  font-size: 30px;
+  color: #003366;
+  font-weight: bold;
+}
+
+.newpost :hover{
+  color: #40e0d0;
+}
+
 .postname{
-  width: 450px;
+  width: 420px;
   height:50px;
   border: 1px solid black;
   float: left;
@@ -44,6 +66,26 @@ h1{
   text-align: center;
   margin: 1px;
 } 
+
+.delete{
+  width: 120px;
+  height: 50px;
+  border: 1px solid black;
+  float: left;
+  font-size: 30px;
+  text-align: center;
+  margin: 1px;
+}
+
+.delete a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #40e0d0;
+}
+
+.delete :hover{
+  color: red;
+}
 
 .postname a{
   text-decoration: none;
@@ -81,4 +123,37 @@ h1{
   margin: 20px;
   color: #40e0d0;
   font-weight: bold;
+}
+
+.back{
+  border : 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  width : 500px;
+  height: 35px;
+}
+
+.back a{
+  text-decoration: none;
+  font-size: 20px;
+  color: #003366;
+  font-weight: bold;
+}
+
+.back :hover{
+  color: #40e0d0;
+}
+
+.newpostname{
+  width: 200px;
+  height: 50px;
+
+}
+
+.submit{
+  border : 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  width : 300px;
+  height: 35px;
 }
