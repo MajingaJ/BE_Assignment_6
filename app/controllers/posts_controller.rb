@@ -11,6 +11,10 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def edit
+    @post = Post.find_by_id(params[:id])
+  end
+
   def create
     @post = Post.new(params[:post])
 
@@ -19,6 +23,16 @@ class PostsController < ApplicationController
     else
       flash[:alert] = "There was an error posting a post"
       render :new
+    end
+  end
+
+  def update
+    @post = Post.find_by_id(params[:id])
+    if @post.update_attributes(params[:post])
+      redirect_to posts_path, notice: "Post was updated sucessfully"
+    else
+      flash[:alert] = "Error!"
+      render :edit
     end
   end
 

@@ -1,0 +1,24 @@
+<h1>List of Authors</h1>
+
+<div class="newpost">
+  <%= link_to "Add new Author", new_author_path %>
+</div>
+
+
+  <% @authors.each do |author| %>
+
+    <div class="postname">
+        <%= link_to author.fname, author_path(author) %>
+    </div>
+
+    <div class="time">
+      <%= author.created_at %>
+    </div>
+
+  <div class="delete">
+    <%= link_to "Delete", author_path(author), method: :delete, data: {confirm: "Are you sure?"} %>
+  </div>
+
+
+  <% end %>
+</ul>

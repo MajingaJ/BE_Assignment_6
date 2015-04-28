@@ -1,0 +1,13 @@
+<%= form_for @author do |f| %>
+  <%= f.label :fname, "First Name" %>
+  <%= f.text_field :fname %> <br>
+
+  <%= f.label :lname, "Last Name" %>
+  <%= f.text_field :lname %> <br>
+
+  <%= f.collection_select(:post_id, Post.all, :id, :postname, prompt: true) %>
+
+  <%= f.submit %>
+
+
+<% end %>

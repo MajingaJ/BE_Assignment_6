@@ -1,0 +1,35 @@
+<%= form_for @post do |f| %>
+
+<div class="newpostname">
+  <%= f.label :postname %>
+  <%= f.text_field :postname %>
+</div>
+
+  </br>
+
+<div class="newpostname">
+  <%= f.label :fname %>
+  <%= f.text_field :fname %>
+</div>
+
+  </br>
+
+<div class="newpostname">
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+</div>
+
+  </br>
+
+<h4>Author</h4>
+<div class="newpostname">
+  <%= f.collection_select(:author_id, Author.all, :id, :fname, prompt: true) %>
+</div>
+
+  </br>
+
+<div class="submit">
+  <%= f.submit %>
+</div>
+
+<% end %>

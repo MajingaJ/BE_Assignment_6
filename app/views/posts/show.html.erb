@@ -4,6 +4,10 @@
   <%= link_to "Back to This Week's List of Blog Posts", posts_path %>
 </div>
 
+<div class="back">
+  <%= link_to "Edit", edit_post_path(@post) %>
+</div>
+
 <div class="postname2">
   <%= @post.postname %>
 </div>
@@ -17,6 +21,10 @@
   <%= @post.email %>
 </div>
 
+
+
 <div class="time2">
   <%= @post.created_at %>
 </div>
+
+
