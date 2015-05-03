@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authorize, except: [:index, :show]
+
   def index
     @posts = Post.all
   end
@@ -17,7 +19,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(params[:post])
+    @post = Post.new(post_params)
 
     if @post.save
       redirect_to post_path(@post), notice: "Post was uploaded successfully"
@@ -29,7 +31,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find_by_id(params[:id])
-    if @post.update_attributes(params[:post])
+    if @post.update_attributes(post_params)
       redirect_to posts_path, notice: "Post was updated sucessfully"
     else
       flash[:alert] = "Error!"
@@ -47,6 +49,12 @@ class PostsController < ApplicationController
     end
 
     redirect_to posts_path
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:email, :postname, :content)
   end
 
 end

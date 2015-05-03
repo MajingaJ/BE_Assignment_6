@@ -3,4 +3,5 @@ class Post < ActiveRecord::Base
   validates :email, presence: true
 
   belongs_to :author
+
 end
